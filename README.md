@@ -14,3 +14,6 @@ A reactive housing rental platform where homeowners and renters can find housing
 ## Feature
 * Great search functionality :mag:
 * A beautiful interface and a great user experience :heart_eyes:
+
+# License
+ReactiveRentals is an open source project, under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
