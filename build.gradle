@@ -37,4 +37,12 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+
+	// Enable records preview for JDK14
+	jvmArgs(['--enable-preview'])
+}
+
+// Enable records preview for JDK14
+tasks.withType(JavaCompile).each {
+	it.options.compilerArgs.add('--enable-preview')
 }
