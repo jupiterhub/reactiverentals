@@ -1,0 +1,27 @@
+sequenceDiagram
+    Homeowner->>+Realtor: Register house ($)
+    Homeowner->>+Realtor: Sets Tenant Criterias
+
+    Realtor->>Realtor: Register house
+
+    Tenant->>+Realtor: View houses
+    Tenant->>+Realtor: Schedule house viewing
+
+    Realtor->>+Tenant: Arrange viewing date
+    Tenant->>Realtor: View house
+    Tenant ->>Realtor: Apply house occupancy
+    Realtor->>Realtor: Review Tenant Application
+    Realtor->>House Agent: Notify for occupancy
+    House Agent->>House Agent: Clean, Fix AC, Water, etc
+
+    Realtor->>Homeowner: Notify tenant move in date
+    Homeowner->>Realtor: Schedules move-in date
+
+    Realtor->>Tenant: Contract
+    Tenant->>Realtor: Sign Contract
+    Realtor->>House Agent: Notify
+    House Agent->>Homeowner: Notify
+    Tenant->>Tenant: Move in
+    Tenant->>House Agent: Pay montly rent
+    House Agent->>Homeowner: management cut and pays to Homeowner
+    
