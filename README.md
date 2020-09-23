@@ -3,7 +3,7 @@ A functional, non-blocking, reactive housing rental platform
 
 # Build status
 * Github Actions: ![CI](https://github.com/jupiterhub/reactiverentals/workflows/CI/badge.svg)
-* Travis: [![Build Status](https://travis-ci.com/jupiterhub/reactiverentals.svg?branch=master)](https://travis-ci.com/jupiterhub/reactiverentals)
+* Travis: [![Build Status](https://travis-ci.com/jupiterhub/reactiverentals.svg?branch=master)](https://travis-ci.com/jupiterhub/reactiverentals) [![Join the chat at https://gitter.im/reactiverentals/community](https://badges.gitter.im/reactiverentals/community.svg)](https://gitter.im/reactiverentals/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 _Note: Travis build will be removed after Github action changes are stable_ 
 # Goals
