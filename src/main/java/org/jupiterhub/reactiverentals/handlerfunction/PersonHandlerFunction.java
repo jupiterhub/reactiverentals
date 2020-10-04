@@ -1,21 +1,29 @@
 package org.jupiterhub.reactiverentals.handlerfunction;
 
+import org.jupiterhub.reactiverentals.record.Person;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-public class PersonHandlerFunction {
-    // ...
+import static org.springframework.http.MediaType.APPLICATION_JSON;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
+public class PersonHandlerFunction {
     public Mono<ServerResponse> listPeople(ServerRequest request) {
-        // ...
+        Flux<Person> people = repository.allPeople();
+        return ok().contentType(APPLICATION_JSON).body(people, Person.class);
     }
 
     public Mono<ServerResponse> createPerson(ServerRequest request) {
-        // ...
+        Mono<Person> person = request.bodyToMono(Person.class);
+        return ok().build(repository.savePerson(person));
     }
 
     public Mono<ServerResponse> getPerson(ServerRequest request) {
-        // ...
+        int personId = Integer.valueOf(request.pathVariable("id"));
+        return repository.getPerson(personId)
+                .flatMap(person -> ok().contentType(APPLICATION_JSON).bodyValue(person))
+                .switchIfEmpty(ServerResponse.notFound().build());
     }
 }

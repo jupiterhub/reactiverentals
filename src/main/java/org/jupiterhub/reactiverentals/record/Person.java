@@ -1,3 +1,3 @@
 package org.jupiterhub.reactiverentals.record;
 
-public record User(String firstName, String lastName) {}
+public record Person(String firstName, String lastName) {}
