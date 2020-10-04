@@ -1,6 +1,7 @@
-package org.jupiterhub.reactiverentals.handlerfunction;
+package org.jupiterhub.reactiverentals.handler;
 
 import org.jupiterhub.reactiverentals.record.Person;
+import org.jupiterhub.reactiverentals.repository.PersonRepository;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
@@ -9,7 +10,10 @@ import reactor.core.publisher.Mono;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
-public class PersonHandlerFunction {
+public class PersonHandler {
+
+    private PersonRepository repository;
+
     public Mono<ServerResponse> listPeople(ServerRequest request) {
         Flux<Person> people = repository.allPeople();
         return ok().contentType(APPLICATION_JSON).body(people, Person.class);
