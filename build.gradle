@@ -23,10 +23,7 @@ dependencies {
 
 	// Other consideration NoSQL Graph db like Neo4j
 	implementation 'org.springframework.data:spring-data-neo4j:latest.release'
-	// add this dependency if you want to use the embedded driver
-//	implementation 'org.neo4j:neo4j-ogm-embedded-driver:latest.release'
-	// add this dependency if you want to use the Http driver
-//	implementation 'org.neo4j:neo4j-ogm-http-driver:latest.release'
+	implementation 'org.springframework.boot:spring-boot-starter-data-cassandra-reactive:2.3.4.RELEASE'
 
 
 	implementation 'org.springframework.boot:spring-boot-starter-security'
