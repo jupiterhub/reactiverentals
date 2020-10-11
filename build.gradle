@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'io.r2dbc:r2dbc-h2:0.8.4.RELEASE'
 
 	// Other consideration NoSQL Graph db like Neo4j
 	implementation 'org.springframework.data:spring-data-neo4j'
