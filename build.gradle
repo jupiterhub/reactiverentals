@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'org.springframework.data:spring-data-r2dbc'
 	implementation 'io.r2dbc:r2dbc-h2:0.8.4.RELEASE'
 
 	// Other consideration NoSQL Graph db like Neo4j
@@ -41,6 +42,7 @@ dependencies {
 	}
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'io.projectreactor:reactor-test:3.3.10.RELEASE'
 }
 
 test {
@@ -54,6 +56,7 @@ test {
 tasks.withType(JavaCompile).each {
 	it.options.compilerArgs.add('--enable-preview')
 }
+
 
 tasks.withType(Test) {
 	jvmArgs += "--enable-preview"
