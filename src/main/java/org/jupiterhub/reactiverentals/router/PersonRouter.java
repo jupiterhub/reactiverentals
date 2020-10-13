@@ -1,4 +1,4 @@
-package org.jupiterhub.reactiverentals.routerfunction;
+package org.jupiterhub.reactiverentals.router;
 
 import org.jupiterhub.reactiverentals.handler.PersonHandler;
 import org.springframework.web.reactive.function.server.RouterFunction;
