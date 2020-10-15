@@ -1,6 +1,7 @@
 package org.jupiterhub.reactiverentals.router;
 
 import org.jupiterhub.reactiverentals.handler.PersonHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
@@ -12,6 +13,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 @Component
 public class PersonRouter {
 
+    @Autowired
     private PersonHandler handler;
 
     public RouterFunction<ServerResponse> getPersonRoutes() {
