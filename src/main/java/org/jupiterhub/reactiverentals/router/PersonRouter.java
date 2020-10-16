@@ -24,4 +24,14 @@ public class PersonRouter {
                 .build();
     }
 
+    public RouterFunction<ServerResponse> getPersonRoutesNested() {
+        return RouterFunctions.route()
+                .path("/person", b1 -> b1
+                        .nest(accept(APPLICATION_JSON), b2 -> b2
+                                .GET("/{id}", handler::getPerson)
+                                .GET("", handler::listPeople))
+                        .POST("/person", handler::createPerson))
+                .build();
+    }
+
 }
