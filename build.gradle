@@ -28,7 +28,19 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+
+
+	// by docs, this should be enough, but it's not being picked up, declare explictly
+	implementation('com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1')
+	constraints {
+		implementation('com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1') {
+			because 'JDK14 records are not supported pre < 2.12.0'
+		}
+	}
+
 	implementation 'org.springframework.boot:spring-boot-starter-rsocket'
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
@@ -41,6 +53,8 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testImplementation 'io.projectreactor:reactor-test:3.3.10.RELEASE'
+
+
 }
 
 test {
