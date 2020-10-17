@@ -1,24 +1,21 @@
 package org.jupiterhub.reactiverentals.repository;
 
 import org.jupiterhub.reactiverentals.record.Person;
-import org.springframework.web.reactive.function.server.ServerResponse;
-import org.springframework.web.server.ServerWebExchange;
+import org.reactivestreams.Publisher;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.function.BiFunction;
-
 public class PersonRepository {
     public Flux<Person> allPeople() {
-        return null;
+        return Flux.empty();
     }
 
-    public BiFunction<ServerWebExchange, ServerResponse.Context, Mono<Void>> savePerson(Mono<Person> person) {
-        return null;
+    public Publisher<Void> savePerson(Mono<Person> person) {
+        return Mono.empty();
     }
 
 
     public Mono<Object> getPerson(int personId) {
-        return null;
+        return Mono.empty();
     }
 }

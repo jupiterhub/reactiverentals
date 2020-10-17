@@ -22,8 +22,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
 
 	// Other consideration NoSQL Graph db like Neo4j
-	implementation 'org.springframework.data:spring-data-neo4j'
-	implementation 'org.springframework.boot:spring-boot-starter-data-cassandra-reactive'
+//	implementation 'org.springframework.data:spring-data-neo4j'
+//	implementation 'org.springframework.boot:spring-boot-starter-data-cassandra-reactive'
 
 
 	implementation 'org.springframework.boot:spring-boot-starter-security'
