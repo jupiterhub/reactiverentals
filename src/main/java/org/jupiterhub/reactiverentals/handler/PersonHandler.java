@@ -2,6 +2,7 @@ package org.jupiterhub.reactiverentals.handler;
 
 import org.jupiterhub.reactiverentals.record.Person;
 import org.jupiterhub.reactiverentals.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -14,6 +15,7 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 @Component
 public class PersonHandler {
 
+    @Autowired
     private PersonRepository repository;
 
     public Mono<ServerResponse> listPeople(ServerRequest request) {
