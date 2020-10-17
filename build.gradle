@@ -31,13 +31,11 @@ dependencies {
 
 
 
-	// by docs, this should be enough, but it's not being picked up, declare explictly
+	// by docs, constraints {} should upgrade transitive, but not working. Explicitly use these versions until Spring boot upgrades
 	implementation('com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1')
-	constraints {
-		implementation('com.fasterxml.jackson.core:jackson-databind:2.12.0-rc1') {
-			because 'JDK14 records are not supported pre < 2.12.0'
-		}
-	}
+	implementation('com.fasterxml.jackson.core:jackson-core:2.12.0-rc1')
+	implementation('com.fasterxml.jackson.core:jackson-annotations:2.12.0-rc1')
+
 
 	implementation 'org.springframework.boot:spring-boot-starter-rsocket'
 
