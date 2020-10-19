@@ -48,6 +48,7 @@ public class WebConfig implements WebFluxConfigurer {
         return new CorsWebFilter(source);
     }
 
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         // For MVC support this is a more traditional way, see #corsFilter for functional endpoint appriach
