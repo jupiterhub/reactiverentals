@@ -30,7 +30,7 @@ public class WebSocketConfig {
         return new SimpleUrlHandlerMapping(map, order);
     }
 
-    @Bean
+//    @Bean
     public WebSocketHandlerAdapter handlerAdapter() {
         return new WebSocketHandlerAdapter(webSocketService());
     }
