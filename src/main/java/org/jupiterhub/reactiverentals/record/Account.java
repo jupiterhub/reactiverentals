@@ -1,3 +1,6 @@
 package org.jupiterhub.reactiverentals.record;
 
-public record Registration(String id, String name, Integer age) {}
+import java.math.BigInteger;
+import java.util.Date;
+
+public record Account(BigInteger accountId, String emailAddress, String accountName, Date registrationDate) {}
