@@ -1,6 +1,6 @@
 package org.jupiterhub.reactiverentals.record;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Date;
 
-public record Account(BigInteger accountId, String emailAddress, String accountName, Date registrationDate, Integer behaviorScore) {}
+public record Payment(BigInteger paymentId, String paymentType, BigDecimal amount) {}
